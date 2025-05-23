@@ -6,18 +6,34 @@
     <title>Let's Grow Your Business Together - Contact Webundance</title>
     <meta name="description" content="Schedule a free consultation to discuss your project. Contact Webundance for custom web development, SEO, and digital strategy services.">
     
-    <!-- CSS -->
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/utilities.css">
     
-    <!-- Preload critical assets -->
-    <link rel="preload" href="css/main.css" as="style">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Webundance",
+            "url": "https://webundance.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-520-365-7151",
+                "contactType": "customer service",
+                "email": "eisner.michaelj@gmail.com",
+                "areaServed": "US",
+                "availableLanguage": "English"
+            }
+        }
+        </script>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -26,10 +42,11 @@
             <a href="/" class="navbar-logo">Webundance</a>
     
             <nav class="navbar-nav" id="navbar-nav">
+                <a href="/" class="navbar-link">Home</a>
                 <a href="services.html" class="navbar-link">Services</a>
                 <a href="process.html" class="navbar-link">Process</a>
                 <a href="results.html" class="navbar-link">Results</a>
-                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                <a href="contact.html" class="navbar-link active" aria-current="page">Contact</a>
             </nav>
     
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
@@ -38,9 +55,370 @@
         </div>
     </header>
     
-    <!-- Main Content -->
     <main>
-        <!-- Content will be added in future tasks -->
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="/" class="breadcrumb-link">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">Contact</span>
+                </div>
+        
+                <div class="page-hero-content">
+                    <h1 class="page-hero-title">Let's Grow Your Business Together</h1>
+                    <p class="page-hero-subtitle">Schedule a free consultation to discuss your project and discover how we can
+                        help transform your online presence with measurable results.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact-section section">
+            <div class="container">
+                <div class="contact-layout">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <div class="contact-form-header">
+                            <h2 class="contact-form-title">Tell Us About Your Project</h2>
+                            <p class="contact-form-subtitle">Fill out the form below and we'll get back to you within 24 hours
+                                with a personalized proposal.</p>
+                        </div>
+        
+                        <form class="contact-form" id="contact-form" action="#" method="POST">
+                            <!-- Honeypot field for spam prevention -->
+                            <div class="honeypot" style="display: none;">
+                                <label for="website">Website:</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+        
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" id="name" name="name" class="form-input" required
+                                        aria-describedby="name-error">
+                                    <span id="name-error" class="form-error" role="alert"></span>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-input" required
+                                        aria-describedby="email-error">
+                                    <span id="email-error" class="form-error" role="alert"></span>
+                                </div>
+                            </div>
+        
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" aria-describedby="phone-error">
+                                    <span id="phone-error" class="form-error" role="alert"></span>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="business" class="form-label">Business Name *</label>
+                                    <input type="text" id="business" name="business" class="form-input" required
+                                        aria-describedby="business-error">
+                                    <span id="business-error" class="form-error" role="alert"></span>
+                                </div>
+                            </div>
+        
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="project-type" class="form-label">Project Type *</label>
+                                    <select id="project-type" name="project-type" class="form-select" required
+                                        aria-describedby="project-error">
+                                        <option value="">Select a project type</option>
+                                        <option value="new-website">New Website Development</option>
+                                        <option value="redesign">Website Redesign</option>
+                                        <option value="seo">SEO & Content Strategy</option>
+                                        <option value="analytics">Analytics & Reporting</option>
+                                        <option value="maintenance">Website Maintenance</option>
+                                        <option value="consultation">Strategy Consultation</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <span id="project-error" class="form-error" role="alert"></span>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="budget" class="form-label">Budget Range</label>
+                                    <select id="budget" name="budget" class="form-select" aria-describedby="budget-error">
+                                        <option value="">Select your budget range</option>
+                                        <option value="under-5k">Under $5,000</option>
+                                        <option value="5k-10k">$5,000 - $10,000</option>
+                                        <option value="10k-20k">$10,000 - $20,000</option>
+                                        <option value="20k-50k">$20,000 - $50,000</option>
+                                        <option value="over-50k">Over $50,000</option>
+                                        <option value="not-sure">Not sure yet</option>
+                                    </select>
+                                    <span id="budget-error" class="form-error" role="alert"></span>
+                                </div>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="message" class="form-label">Project Details *</label>
+                                <textarea id="message" name="message" class="form-textarea"
+                                    placeholder="Tell us about your goals, current challenges, and what you'd like to accomplish..."
+                                    required aria-describedby="message-error"></textarea>
+                                <span id="message-error" class="form-error" role="alert"></span>
+                            </div>
+        
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large" id="submit-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <span class="loading-spinner"></span>
+                                        Sending...
+                                    </span>
+                                </button>
+                            </div>
+        
+                            <!-- Success/Error Messages -->
+                            <div id="form-success" class="form-message form-success" style="display: none;">
+                                <div class="message-icon">✓</div>
+                                <div class="message-content">
+                                    <h3>Thank you for reaching out!</h3>
+                                    <p>We've received your message and will get back to you within 24 hours with a personalized
+                                        proposal.</p>
+                                </div>
+                            </div>
+        
+                            <div id="form-error" class="form-message form-error-message" style="display: none;">
+                                <div class="message-icon">⚠</div>
+                                <div class="message-content">
+                                    <h3>Oops! Something went wrong</h3>
+                                    <p>Please try again or contact us directly at <a
+                                            href="mailto:eisner.michaelj@gmail.com">eisner.michaelj@gmail.com</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+        
+                    <!-- Contact Info Sidebar -->
+                    <div class="contact-info-container">
+                        <!-- Direct Contact -->
+                        <div class="contact-info-card">
+                            <h3 class="contact-info-title">Get In Touch</h3>
+        
+                            <div class="contact-info-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:eisner.michaelj@gmail.com">eisner.michaelj@gmail.com</a>
+                                </div>
+                            </div>
+        
+                            <div class="contact-info-item">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <h4>Phone</h4>
+                                    <a href="tel:520-365-7151">520-365-7151</a>
+                                </div>
+                            </div>
+        
+                            <div class="contact-info-item">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h4>Location</h4>
+                                    <p>Tucson, Arizona<br>Serving businesses nationwide</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Business Hours -->
+                        <div class="contact-info-card">
+                            <h3 class="contact-info-title">Business Hours</h3>
+        
+                            <div class="business-hours">
+                                <div class="hours-item">
+                                    <span class="day">Monday - Friday</span>
+                                    <span class="time">9:00 AM - 6:00 PM MST</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="day">Saturday</span>
+                                    <span class="time">10:00 AM - 2:00 PM MST</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="day">Sunday</span>
+                                    <span class="time">Closed</span>
+                                </div>
+                            </div>
+        
+                            <p class="hours-note">Emergency support available 24/7 for existing clients</p>
+                        </div>
+        
+                        <!-- Response Promise -->
+                        <div class="contact-info-card response-promise">
+                            <div class="promise-icon">⚡</div>
+                            <h3 class="contact-info-title">Our Response Promise</h3>
+                            <p>We respond to all inquiries within <strong>24 hours</strong> during business days, often much
+                                sooner.</p>
+                            <ul class="promise-list">
+                                <li>Free initial consultation (30 minutes)</li>
+                                <li>Detailed project proposal</li>
+                                <li>Transparent pricing</li>
+                                <li>No obligation to proceed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Location Section -->
+        <section class="location-section section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Based in Tucson, Serving Everywhere</h2>
+                    <p class="section-subtitle">We work with businesses across the United States to deliver exceptional web
+                        solutions</p>
+                </div>
+        
+                <div class="location-content">
+                    <div class="location-visual">
+                        <div class="location-illustration">
+                            <div class="map-container">
+                                <div class="map-pin">
+                                    <div class="pin-icon">📍</div>
+                                    <div class="pin-label">Tucson, AZ</div>
+                                </div>
+                                <div class="map-background">
+                                    <div class="map-grid"></div>
+                                    <div class="map-connections">
+                                        <div class="connection-line"></div>
+                                        <div class="connection-line"></div>
+                                        <div class="connection-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="location-info">
+                        <h3 class="location-title">Local Expertise, Global Reach</h3>
+                        <p class="location-description">
+                            While we're proudly based in Tucson, Arizona, we serve businesses nationwide through remote
+                            collaboration.
+                            Our team combines local market knowledge with cutting-edge web technologies to deliver results that
+                            matter.
+                        </p>
+        
+                        <div class="location-stats">
+                            <div class="location-stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">States Served</span>
+                            </div>
+                            <div class="location-stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Remote Capable</span>
+                            </div>
+                            <div class="location-stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Support Available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Consultation Process FAQ</h2>
+                    <p class="section-subtitle">Common questions about getting started with your project</p>
+                </div>
+        
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What happens during the free consultation?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>During our 30-minute consultation, we'll discuss your business goals, current challenges, and
+                                project requirements. We'll also explain our process, share relevant case studies, and provide
+                                initial recommendations tailored to your needs.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How long does it take to receive a proposal?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most proposals are delivered within 24-48 hours after our consultation. For complex projects, we
+                                may take up to one week to ensure we provide the most accurate scope and pricing.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Do you require a deposit to get started?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we typically require a 50% deposit before beginning work. This ensures commitment from both
+                                parties and allows us to allocate dedicated resources to your project. The remaining balance is
+                                due upon project completion.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can you work with existing websites or only new builds?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We work with both new website development and existing site improvements. Whether you need a
+                                complete redesign, performance optimization, SEO improvements, or additional features, we can
+                                help enhance your current online presence.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What if I'm not sure about my budget or requirements?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>That's perfectly fine! Part of our consultation process involves helping you define your
+                                requirements and establish a realistic budget. We'll work with you to prioritize features and
+                                create a phased approach if needed.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Do you provide ongoing support after launch?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! We offer various maintenance and support packages to keep your website secure,
+                                updated, and performing optimally. We also provide training so your team can manage day-to-day
+                                content updates independently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Transform Your Online Presence?</h2>
+                    <p class="cta-subtitle">Join the growing number of businesses achieving measurable results with our
+                        data-driven web solutions.</p>
+        
+                    <a href="#contact-form" class="btn btn-secondary btn-large">
+                        Start Your Free Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
     
     <!-- Footer -->
