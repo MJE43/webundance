@@ -1,0 +1,74 @@
+---
+description: 
+globs: **/*.css
+alwaysApply: false
+---
+## 3. css-architecture.mdc
+
+---
+description: CSS organization and styling patterns
+globs: ["**/*.css"]
+alwaysApply: false
+---
+
+# CSS Architecture for Webundance
+
+## File Organization
+- main.css: Reset, custom properties, base styles
+- components.css: Reusable component styles
+- utilities.css: Utility classes
+
+## Naming Conventions
+- Use BEM-inspired naming: .component, .component-element, .component--modifier
+- Utility classes: .u-hidden, .u-text-center
+- State classes: .is-active, .is-loading
+
+## Mobile-First Approach
+```css
+/* Mobile styles (default) */
+.component {
+  padding: var(--space-4);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .component {
+    padding: var(--space-6);
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .component {
+    padding: var(--space-8);
+  }
+}
+Component Pattern
+css.card {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  
+  /* Spacing */
+  padding: var(--space-6);
+  gap: var(--space-4);
+  
+  /* Visual */
+  background: var(--bg-white);
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  
+  /* Animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+Performance Rules
+
+No CSS frameworks (pure CSS only)
+Group media queries at end of file
+Use CSS custom properties for all values
+Minimize specificity (max 3 levels)

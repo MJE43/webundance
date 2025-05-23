@@ -1,0 +1,62 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: Guidelines for creating consistent components
+alwaysApply: true
+---
+
+# Component Creation Guidelines
+
+## Button Components
+Always create buttons with these variants:
+
+### Primary Button
+```html
+<a href="#" class="btn btn-primary">Call to Action</a>
+css.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+Secondary Button
+html<a href="#" class="btn btn-secondary">Learn More</a>
+Ghost Button
+html<a href="#" class="btn btn-ghost">View Details</a>
+Card Components
+html<article class="card [modifier-class]">
+  <div class="card-header">
+    <!-- Icon or image -->
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">Title</h3>
+    <p class="card-description">Description</p>
+  </div>
+  <div class="card-footer">
+    <!-- CTA or metadata -->
+  </div>
+</article>
+Section Structure
+html<section class="section section--[name]">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Section Title</h2>
+      <p class="section-subtitle">Optional subtitle</p>
+    </div>
+    <div class="section-content">
+      <!-- Content here -->
+    </div>
+  </div>
+</section>
+Grid Layouts
+
+Use CSS Grid for 2D layouts
+Use Flexbox for 1D layouts
+Always make grids responsive
+Use gap property for spacing
+

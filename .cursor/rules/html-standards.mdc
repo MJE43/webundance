@@ -1,0 +1,51 @@
+---
+description: 
+globs: **/*.html
+alwaysApply: false
+---
+---
+description: HTML structure and semantic markup standards
+globs: ["**/*.html"]
+alwaysApply: false
+---
+
+# HTML Standards for Webundance
+
+## Document Structure
+- Use HTML5 semantic elements: header, nav, main, section, article, aside, footer
+- Include proper meta tags in this order:
+  1. charset
+  2. viewport
+  3. title
+  4. description
+  5. Open Graph tags
+  6. favicon links
+
+## SEO Requirements
+- One H1 per page containing primary keyword
+- Proper heading hierarchy (never skip levels)
+- Alt text on all images (descriptive, includes keywords naturally)
+- Title tags: 50-60 characters
+- Meta descriptions: 150-160 characters
+
+## Component Structure Example:
+```html
+<article class="card service-card">
+  <div class="card-icon">
+    <img src="/images/icon.svg" alt="Description" width="60" height="60" loading="lazy">
+  </div>
+  <h3 class="card-title">Title</h3>
+  <p class="card-description">Description text</p>
+  <a href="/page" class="btn btn-primary">
+    Learn More
+    <span class="sr-only">additional context for screen readers</span>
+  </a>
+</article>
+
+## Accessibility
+
+Use semantic HTML before ARIA
+Include skip navigation link
+Form labels properly associated
+Buttons for actions, links for navigation
+Focus indicators on all interactive elements

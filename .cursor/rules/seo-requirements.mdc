@@ -1,0 +1,51 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: SEO implementation checklist
+alwaysApply: false
+---
+
+# SEO Requirements
+
+## On-Page SEO
+1. Unique title tags per page (50-60 chars)
+2. Unique meta descriptions (150-160 chars)
+3. Proper heading hierarchy (H1 → H2 → H3)
+4. Internal linking (2-3 per page minimum)
+5. Image alt text (descriptive, natural keywords)
+
+## Technical SEO
+1. Clean URL structure (/services not /services.html)
+2. XML sitemap at /sitemap.xml
+3. Robots.txt file
+4. Canonical URLs on all pages
+5. 404 error page
+
+## Structured Data
+Add business schema to every page:
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebDesign",
+  "name": "Webundance",
+  "description": "Custom web development and digital marketing",
+  "url": "https://webundance.com",
+  "telephone": "520-365-7151",
+  "email": "eisner.michaelj@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tucson",
+    "addressRegion": "AZ"
+  }
+}
+</script>
+Open Graph Tags
+html<meta property="og:title" content="Page Title">
+<meta property="og:description" content="Page description">
+<meta property="og:image" content="https://webundance.com/og-image.jpg">
+<meta property="og:url" content="https://webundance.com/page">
+<meta property="og:type" content="website">

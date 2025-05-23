@@ -1,0 +1,57 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: WCAG 2.1 AA compliance requirements
+alwaysApply: true
+---
+
+# Accessibility Standards
+
+## Color Contrast
+- Normal text: 4.5:1 minimum
+- Large text (18pt+): 3:1 minimum
+- Use Chrome DevTools to verify
+
+## Keyboard Navigation
+- All interactive elements keyboard accessible
+- Visible focus indicators:
+  ```css
+  :focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+Tab order follows visual flow
+Skip navigation link as first element
+
+Screen Reader Support
+
+Semantic HTML first
+ARIA labels only when needed:
+html<button aria-label="Close dialog">×</button>
+
+Screen reader only text:
+css.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+Form Accessibility
+html<div class="form-group">
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" required aria-describedby="email-error">
+  <span id="email-error" class="error" role="alert"></span>
+</div>
+Image Accessibility
+
+Alt text on all images
+Empty alt="" for decorative images
+Descriptive filenames

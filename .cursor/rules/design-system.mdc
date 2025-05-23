@@ -1,0 +1,41 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Core design system and CSS variables for Webundance
+alwaysApply: true
+---
+
+# Design System Standards
+
+Always use these CSS custom properties - never hardcode values:
+
+## Colors
+- Primary: --primary (#2563eb), --primary-dark (#1e40af), --primary-light (#3b82f6)
+- Secondary: --secondary (#10b981), --accent (#8b5cf6)
+- Text: --text-dark (#1f2937), --text-body (#4b5563), --text-light (#6b7280)
+- Backgrounds: --bg-white (#ffffff), --bg-light (#f9fafb), --bg-gray (#f3f4f6)
+- Gradients: --gradient-primary (135deg, #667eea 0%, #764ba2 100%)
+
+## Typography
+- Font: --font-primary (-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif)
+- Display font: --font-display ('Inter', sans-serif) from Google Fonts
+- Sizes: --text-xs through --text-5xl (0.75rem to 3rem)
+- Weights: --font-normal (400) through --font-extrabold (800)
+- Line heights: --leading-tight (1.25), --leading-normal (1.6), --leading-relaxed (1.8)
+
+## Spacing
+- Use spacing scale: --space-1 through --space-24 (0.25rem to 6rem)
+- Never use arbitrary values like padding: 23px
+
+## Components
+- Border radius: Small (10px), Medium (15px), Large (20px), Full (50px)
+- Shadows: Light (0 5px 20px rgba(0,0,0,0.08)), Medium (0 10px 30px rgba(0,0,0,0.15))
+- Transitions: Standard (all 0.3s ease)
+
+## Animation Guidelines
+- Use transform and opacity only for performance
+- Standard duration: 0.3s for hovers, 0.8s for entrances
+- Always respect prefers-reduced-motion

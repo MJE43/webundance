@@ -1,0 +1,56 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Performance optimization requirements
+alwaysApply: true
+---
+
+# Performance Requirements
+
+## Page Weight Limits
+- Total page weight < 1MB (excluding images)
+- Individual CSS files < 50KB
+- Individual JS files < 30KB
+- Hero images < 200KB (use WebP)
+- Other images < 100KB
+
+## Loading Strategy
+1. Inline critical CSS in <head>
+2. Preload key resources:
+   ```html
+   <link rel="preload" href="/css/main.css" as="style">
+   <link rel="preload" href="/fonts/inter.woff2" as="font" crossorigin>
+
+Defer non-critical JavaScript:
+html<script src="/js/main.js" defer></script>
+
+Lazy load images below fold:
+html<img src="image.jpg" loading="lazy" alt="Description">
+
+
+Image Optimization
+
+Use WebP with fallback:
+html<picture>
+  <source srcset="image.webp" type="image/webp">
+  <img src="image.jpg" alt="Description">
+</picture>
+
+Implement responsive images:
+html<img srcset="image-small.jpg 400w,
+             image-medium.jpg 800w,
+             image-large.jpg 1200w"
+     sizes="(max-width: 768px) 100vw, 50vw"
+     src="image-medium.jpg"
+     alt="Description">
+
+
+CSS Performance
+
+Use CSS containment for complex components
+Avoid expensive selectors (*, [attr^=])
+Use transform/opacity for animations
+Enable GPU acceleration when appropriate

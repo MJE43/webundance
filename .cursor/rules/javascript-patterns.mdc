@@ -1,0 +1,86 @@
+---
+description: 
+globs: **/*.js
+alwaysApply: false
+---
+## 4. javascript-patterns.mdc
+
+---
+description: JavaScript patterns and best practices
+globs: ["**/*.js"]
+alwaysApply: false
+---
+
+# JavaScript Standards for Webundance
+
+## General Rules
+- Vanilla JavaScript only - no jQuery or frameworks
+- Use modern ES6+ syntax
+- Progressive enhancement approach
+- Event delegation for performance
+
+## Common Patterns
+
+### Smooth Scroll
+```javascript
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+Intersection Observer for Animations
+javascriptconst observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in');
+      observer.unobserve(entry.target); // Only animate once
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  observer.observe(el);
+});
+Form Validation Pattern
+javascriptconst form = document.querySelector('#contact-form');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  // Clear previous errors
+  form.querySelectorAll('.error').forEach(el => el.remove());
+  
+  // Validate fields
+  let isValid = true;
+  
+  // Email validation
+  const email = form.querySelector('[name="email"]');
+  if (!emailRegex.test(email.value)) {
+    showError(email, 'Please enter a valid email');
+    isValid = false;
+  }
+  
+  if (isValid) {
+    // Submit form
+    submitForm(new FormData(form));
+  }
+});
+Performance Guidelines
+
+Debounce scroll/resize events
+Use requestAnimationFrame for animations
+Lazy load images below the fold
+Minimize DOM queries (cache elements)
