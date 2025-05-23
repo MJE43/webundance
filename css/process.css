@@ -1,0 +1,446 @@
+/* ==========================================================================
+   Webundance Premium Process Timeline Design
+   Sophisticated timeline visualization with enhanced visual hierarchy
+   ========================================================================== */
+
+/* Enhanced Process Section Container */
+.process-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.process-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(16, 185, 129, 0.02) 100%);
+  pointer-events: none;
+}
+
+/* Premium Timeline Container */
+.process-timeline {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: var(--space-12) !important;
+  margin-top: var(--space-16) !important;
+  z-index: 1;
+}
+
+/* Sophisticated Connecting Line */
+.process-timeline::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 30px !important;
+  top: 60px !important;
+  bottom: 60px !important;
+  width: 4px !important;
+  background: linear-gradient(180deg,
+      var(--primary) 0%,
+      var(--secondary) 50%,
+      var(--accent) 100%) !important;
+  border-radius: 2px !important;
+  opacity: 0.6 !important;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.3) !important;
+  z-index: 0 !important;
+}
+
+/* Premium Process Step Cards */
+.process-step {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: var(--space-8) !important;
+  position: relative !important;
+  background: var(--bg-white) !important;
+  padding: var(--space-8) !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 2 !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Premium Step Gradient Border */
+.process-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+  border-radius: 20px 20px 0 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Premium Step Hover Effects */
+.process-step:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow:
+    0 20px 40px -12px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.process-step:hover::before {
+  transform: scaleX(1);
+}
+
+/* Professional Process Number Design */
+.process-number {
+  flex-shrink: 0 !important;
+  width: 60px !important;
+  height: 60px !important;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+  color: var(--bg-white) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: var(--text-xl) !important;
+  font-weight: 700 !important;
+  position: relative !important;
+  box-shadow:
+    0 8px 16px -4px rgba(37, 99, 235, 0.3),
+    0 0 0 4px rgba(255, 255, 255, 1),
+    0 0 0 6px rgba(37, 99, 235, 0.1) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 3 !important;
+}
+
+/* Premium Number Hover Effects */
+.process-step:hover .process-number {
+  transform: scale(1.1) rotate(5deg) !important;
+  box-shadow:
+    0 12px 24px -4px rgba(37, 99, 235, 0.4),
+    0 0 0 4px rgba(255, 255, 255, 1),
+    0 0 0 8px rgba(37, 99, 235, 0.15),
+    0 0 20px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Enhanced Process Content */
+.process-content {
+  flex: 1 !important;
+  min-width: 0 !important;
+  padding-top: var(--space-2) !important;
+}
+
+/* Professional Process Title */
+.process-title {
+  font-size: var(--text-2xl) !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: var(--space-4) !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.01em !important;
+  transition: color 0.3s ease !important;
+  position: relative;
+}
+
+.process-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-step:hover .process-title {
+  color: var(--primary) !important;
+}
+
+.process-step:hover .process-title::after {
+  transform: scaleX(1);
+}
+
+/* Enhanced Process Description */
+.process-description {
+  font-size: var(--text-base) !important;
+  line-height: 1.7 !important;
+  color: var(--text-body) !important;
+  margin-bottom: 0 !important;
+  font-weight: 450 !important;
+  letter-spacing: -0.005em !important;
+  transition: color 0.3s ease !important;
+}
+
+.process-step:hover .process-description {
+  color: var(--text-dark) !important;
+}
+
+/* Premium CTA Button Enhancement */
+.process-cta {
+  text-align: center !important;
+  margin-top: var(--space-16) !important;
+  position: relative;
+  z-index: 2;
+}
+
+.process-cta .btn {
+  position: relative !important;
+  padding: var(--space-6) var(--space-12) !important;
+  font-size: var(--text-lg) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  box-shadow:
+    0 8px 16px -4px rgba(37, 99, 235, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  overflow: hidden;
+}
+
+.process-cta .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.process-cta .btn:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow:
+    0 16px 32px -8px rgba(37, 99, 235, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.15) !important;
+}
+
+.process-cta .btn:hover::before {
+  left: 100%;
+}
+
+/* ========================================================================== 
+   Responsive Design for Process Timeline
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .process-timeline::before {
+    left: 20px !important;
+  }
+
+  .process-step {
+    gap: var(--space-6) !important;
+    padding: var(--space-6) !important;
+    transform: none !important;
+  }
+
+  .process-step:hover {
+    transform: translateY(-4px) !important;
+  }
+
+  .process-number {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: var(--text-lg) !important;
+  }
+
+  .process-step:hover .process-number {
+    transform: scale(1.05) !important;
+  }
+
+  .process-title {
+    font-size: var(--text-xl) !important;
+  }
+
+  .process-description {
+    font-size: var(--text-sm) !important;
+  }
+
+  .process-cta .btn {
+    padding: var(--space-4) var(--space-8) !important;
+    font-size: var(--text-base) !important;
+  }
+}
+
+/* ========================================================================== 
+   Accessibility and Motion Preferences
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .process-step,
+  .process-number,
+  .process-title,
+  .process-description,
+  .process-cta .btn {
+    transition: none !important;
+  }
+
+  .process-step:hover {
+    transform: none !important;
+  }
+
+  .process-step:hover .process-number {
+    transform: none !important;
+  }
+
+  .process-title::after,
+  .process-step::before,
+  .process-cta .btn::before {
+    transition: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .process-step {
+    border: 2px solid var(--text-dark) !important;
+  }
+
+  .process-number {
+    box-shadow: none !important;
+    border: 2px solid var(--bg-white) !important;
+  }
+
+  .process-timeline::before {
+    background: var(--text-dark) !important;
+    opacity: 0.8 !important;
+  }
+}
+
+/* ========================================================================== 
+   Advanced Animation Enhancements
+   ========================================================================== */
+
+/* Staggered Animation Support */
+.process-step[data-delay="0"] {
+  animation-delay: 0s;
+}
+
+.process-step[data-delay="100"] {
+  animation-delay: 0.1s;
+}
+
+.process-step[data-delay="200"] {
+  animation-delay: 0.2s;
+}
+
+.process-step[data-delay="300"] {
+  animation-delay: 0.3s;
+}
+
+/* Enhanced Timeline Line Animation */
+@keyframes timelineGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  }
+}
+
+.process-timeline::before {
+  animation: timelineGlow 3s ease-in-out infinite;
+}
+
+/* Number Pulse Effect */
+@keyframes numberPulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 8px 16px -4px rgba(37, 99, 235, 0.3),
+      0 0 0 4px rgba(255, 255, 255, 1),
+      0 0 0 6px rgba(37, 99, 235, 0.1);
+  }
+
+  50% {
+    box-shadow:
+      0 8px 16px -4px rgba(37, 99, 235, 0.4),
+      0 0 0 4px rgba(255, 255, 255, 1),
+      0 0 0 8px rgba(37, 99, 235, 0.15);
+  }
+}
+
+.process-number {
+  animation: numberPulse 2s ease-in-out infinite;
+}
+
+@media (min-width: 1024px) {
+  .process-timeline {
+    flex-direction: row !important;
+    align-items: stretch !important;
+    gap: var(--space-6) !important;
+    position: relative !important;
+  }
+
+  .process-timeline::before {
+    top: 30px !important;
+    /* Center of the process number (60px height / 2) */
+    left: 30px !important;
+    /* Start from center of first number */
+    right: 30px !important;
+    /* End at center of last number */
+    bottom: auto !important;
+    height: 4px !important;
+    width: auto !important;
+  }
+
+  .process-step {
+    flex: 1 !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: var(--space-6) !important;
+    padding: 0 var(--space-4) var(--space-8) var(--space-4) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    max-width: none !important;
+  }
+
+  .process-step::before {
+    display: none !important;
+    /* Remove the gradient border for horizontal layout */
+  }
+
+  .process-step:hover {
+    transform: translateY(-4px) !important;
+    background: var(--bg-white) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 16px !important;
+  }
+
+  .process-content {
+    text-align: center !important;
+    padding-top: 0 !important;
+  }
+
+  .process-title {
+    text-align: center !important;
+    margin-bottom: var(--space-3) !important;
+  }
+
+  .process-description {
+    text-align: center !important;
+    font-size: var(--text-sm) !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .process-timeline::before,
+  .process-number {
+    animation: none !important;
+  }
+}
