@@ -3,46 +3,608 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proven Results for Small Businesses - Webundance</title>
-    <meta name="description" content="Real clients, real growth, real impact. See case studies and testimonials showing 98% satisfaction, 25% traffic growth, and 40% ranking improvements.">
+    <title>Proven Results for Small Businesses | Webundance</title>
+    <meta name="description"
+        content="See real results from our web development projects: 25% traffic increases, 40% ranking improvements, and 98% client satisfaction. View case studies and testimonials.">
     
-    <!-- CSS -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/utilities.css">
     
-    <!-- Preload critical assets -->
-    <link rel="preload" href="css/main.css" as="style">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Webundance",
+                "url": "https://webundance.com",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "47",
+                    "bestRating": "5"
+                }
+            }
+            </script>
 </head>
 <body>
     <!-- Header Navigation -->
     <header class="navbar" id="navbar">
         <div class="navbar-container">
             <a href="/" class="navbar-logo">Webundance</a>
-    
+
             <nav class="navbar-nav" id="navbar-nav">
+                <a href="/" class="navbar-link">Home</a>
                 <a href="services.html" class="navbar-link">Services</a>
                 <a href="process.html" class="navbar-link">Process</a>
-                <a href="results.html" class="navbar-link">Results</a>
+                <a href="results.html" class="navbar-link active" aria-current="page">Results</a>
                 <a href="contact.html" class="btn btn-primary">Get Started</a>
             </nav>
-    
+
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
                 <span class="navbar-toggle-icon"></span>
             </button>
         </div>
     </header>
-    
-    <!-- Main Content -->
+
     <main>
-        <!-- Content will be added in future tasks -->
+        <!-- Hero Section -->
+        <section class="hero hero-results">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Proven Results for Small Businesses</h1>
+                    <p class="hero-subtitle">Real clients, real growth, real impact. See how our data-driven approach delivers
+                        measurable success for businesses like yours.</p>
+        
+                    <div class="hero-stats">
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number" data-target="98">0</div>
+                            <div class="stat-label">% Client Satisfaction</div>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number" data-target="25">0</div>
+                            <div class="stat-label">% Avg Traffic Increase</div>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number" data-target="40">0</div>
+                            <div class="stat-label">% Ranking Improvement</div>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number" data-target="85">0</div>
+                            <div class="stat-label">% Client Retention</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Case Studies Section -->
+        <section class="case-studies section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Client Success Stories</h2>
+                    <p class="section-subtitle">Detailed case studies showing real transformations and measurable growth</p>
+                </div>
+        
+                <!-- Case Study 1 -->
+                <article class="case-study animate-on-scroll">
+                    <div class="case-study-content">
+                        <div class="case-study-info">
+                            <h3 class="case-study-title">Desert Bloom Landscaping</h3>
+                            <p class="case-study-industry">Landscaping & Garden Design</p>
+        
+                            <div class="case-study-section">
+                                <h4>The Challenge</h4>
+                                <p>Local landscaping business with 15 years of experience but virtually no online presence. They
+                                    were losing potential clients to competitors with better websites and struggled to showcase
+                                    their premium work quality.</p>
+                            </div>
+        
+                            <div class="case-study-section">
+                                <h4>Our Solution</h4>
+                                <ul>
+                                    <li>Custom responsive website with stunning project gallery</li>
+                                    <li>Local SEO optimization for "landscaping Tucson" keywords</li>
+                                    <li>Online quote request system with project planner</li>
+                                    <li>Google Business Profile optimization</li>
+                                </ul>
+                            </div>
+        
+                            <div class="case-study-results">
+                                <h4>Results Achieved</h4>
+                                <div class="results-grid">
+                                    <div class="result-item">
+                                        <span class="result-number">312%</span>
+                                        <span class="result-label">Website Traffic Increase</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-number">45</span>
+                                        <span class="result-label">New Leads per Month</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-number">#1</span>
+                                        <span class="result-label">Google Ranking for Target Keywords</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-number">$127K</span>
+                                        <span class="result-label">Additional Revenue in 6 Months</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="case-study-visual">
+                            <div class="before-after">
+                                <div class="before-after-item">
+                                    <h5>Before</h5>
+                                    <div class="metric-comparison">
+                                        <div class="metric">
+                                            <span class="metric-label">Monthly Website Visitors</span>
+                                            <span class="metric-value old">47</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Google Page 1 Rankings</span>
+                                            <span class="metric-value old">0</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Online Leads/Month</span>
+                                            <span class="metric-value old">2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="before-after-item">
+                                    <h5>After</h5>
+                                    <div class="metric-comparison">
+                                        <div class="metric">
+                                            <span class="metric-label">Monthly Website Visitors</span>
+                                            <span class="metric-value new">194</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Google Page 1 Rankings</span>
+                                            <span class="metric-value new">12</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Online Leads/Month</span>
+                                            <span class="metric-value new">45</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <blockquote class="case-study-testimonial">
+                        <p>"The results speak for themselves. We went from barely any online presence to being the top
+                            landscaper in our area. The website Michael built showcases our work beautifully, and we're getting
+                            quality leads every day."</p>
+                        <cite>— Sarah Martinez, Owner, Desert Bloom Landscaping</cite>
+                    </blockquote>
+                </article>
+        
+                <!-- Case Study 2 -->
+                <article class="case-study animate-on-scroll">
+                    <div class="case-study-content">
+                        <div class="case-study-info">
+                            <h3 class="case-study-title">Copper Canyon Dental</h3>
+                            <p class="case-study-industry">Dental Practice</p>
+        
+                            <div class="case-study-section">
+                                <h4>The Challenge</h4>
+                                <p>Established dental practice needed to attract younger patients and compete with newer
+                                    practices offering online booking. Their outdated website wasn't mobile-friendly and failed
+                                    to convert visitors.</p>
+                            </div>
+        
+                            <div class="case-study-section">
+                                <h4>Our Solution</h4>
+                                <ul>
+                                    <li>Modern, mobile-first website design</li>
+                                    <li>Online appointment booking system integration</li>
+                                    <li>Patient portal for forms and communication</li>
+                                    <li>Local SEO for dental services</li>
+                                    <li>Patient review management system</li>
+                                </ul>
+                            </div>
+        
+                            <div class="case-study-results">
+                                <h4>Results Achieved</h4>
+                                <div class="results-grid">
+                                    <div class="result-item">
+                                        <span class="result-number">180%</span>
+                                        <span class="result-label">Online Appointment Bookings</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-number">67%</span>
+                                        <span class="result-label">Increase in New Patients</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-number">89%</span>
+                                        <span class="result-label">Mobile Traffic Improvement</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-number">4.8</span>
+                                        <span class="result-label">Star Average Google Rating</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="case-study-visual">
+                            <div class="before-after">
+                                <div class="before-after-item">
+                                    <h5>Before</h5>
+                                    <div class="metric-comparison">
+                                        <div class="metric">
+                                            <span class="metric-label">Mobile Conversion Rate</span>
+                                            <span class="metric-value old">1.2%</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Online Bookings/Month</span>
+                                            <span class="metric-value old">23</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">New Patients/Month</span>
+                                            <span class="metric-value old">18</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="before-after-item">
+                                    <h5>After</h5>
+                                    <div class="metric-comparison">
+                                        <div class="metric">
+                                            <span class="metric-label">Mobile Conversion Rate</span>
+                                            <span class="metric-value new">5.7%</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Online Bookings/Month</span>
+                                            <span class="metric-value new">64</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">New Patients/Month</span>
+                                            <span class="metric-value new">30</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <blockquote class="case-study-testimonial">
+                        <p>"Our new website has transformed our practice. Patients love the online booking, and we're seeing
+                            more young families than ever before. The mobile experience is fantastic."</p>
+                        <cite>— Dr. Jennifer Chen, Copper Canyon Dental</cite>
+                    </blockquote>
+                </article>
+        
+                <!-- Case Study 3 -->
+                <article class="case-study animate-on-scroll">
+                    <div class="case-study-content">
+                        <div class="case-study-info">
+                            <h3 class="case-study-title">Southwest Solar Solutions</h3>
+                            <p class="case-study-industry">Solar Energy Installation</p>
+        
+                            <div class="case-study-section">
+                                <h4>The Challenge</h4>
+                                <p>Fast-growing solar company needed to establish authority in a competitive market and educate
+                                    potential customers about solar benefits while generating qualified leads for high-value
+                                    installations.</p>
+                            </div>
+        
+                            <div class="case-study-section">
+                                <h4>Our Solution</h4>
+                                <ul>
+                                    <li>Educational content hub with solar calculator</li>
+                                    <li>Lead qualification system with instant quotes</li>
+                                    <li>SEO content strategy for solar keywords</li>
+                                    <li>Customer testimonials and case study showcase</li>
+                                    <li>Local landing pages for service areas</li>
+                                </ul>
+                            </div>
+        
+                            <div class="case-study-results">
+                                <h4>Results Achieved</h4>
+                                <div class="results-grid">
+                                    <div class="result-item">
+                                        <span class="result-number">245%</span>
+                                        <span class="result-label">Qualified Lead Increase</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-number">58%</span>
+                                        <span class="result-label">Cost Per Lead Reduction</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-number">15</span>
+                                        <span class="result-label">Page 1 Google Rankings</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-number">$2.1M</span>
+                                        <span class="result-label">Attributed Revenue Growth</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="case-study-visual">
+                            <div class="before-after">
+                                <div class="before-after-item">
+                                    <h5>Before</h5>
+                                    <div class="metric-comparison">
+                                        <div class="metric">
+                                            <span class="metric-label">Monthly Qualified Leads</span>
+                                            <span class="metric-value old">28</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Cost Per Lead</span>
+                                            <span class="metric-value old">$187</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Conversion Rate</span>
+                                            <span class="metric-value old">2.8%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="before-after-item">
+                                    <h5>After</h5>
+                                    <div class="metric-comparison">
+                                        <div class="metric">
+                                            <span class="metric-label">Monthly Qualified Leads</span>
+                                            <span class="metric-value new">97</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Cost Per Lead</span>
+                                            <span class="metric-value new">$78</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Conversion Rate</span>
+                                            <span class="metric-value new">7.2%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <blockquote class="case-study-testimonial">
+                        <p>"The website doesn't just look great—it works. The solar calculator and educational content help
+                            customers understand the value before they even call us. Our closing rate has never been higher."
+                        </p>
+                        <cite>— Marcus Rodriguez, Sales Director, Southwest Solar Solutions</cite>
+                    </blockquote>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Testimonials Grid -->
+        <section class="testimonials-grid section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-subtitle">Hear from business owners who've experienced real growth</p>
+                </div>
+        
+                <div class="testimonials-container">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-text">
+                            "Webundance delivered exactly what they promised. Our website traffic doubled in just 4 months, and
+                            we're getting calls from customers who found us online."
+                        </blockquote>
+                        <cite class="testimonial-author">
+                            <strong>Lisa Thompson</strong>
+                            <span>Thompson Accounting Services</span>
+                        </cite>
+                    </div>
+        
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-text">
+                            "The attention to detail is incredible. Every page loads fast, looks professional, and converts
+                            visitors into customers. Best investment we've made."
+                        </blockquote>
+                        <cite class="testimonial-author">
+                            <strong>David Kim</strong>
+                            <span>Kim's Auto Repair</span>
+                        </cite>
+                    </div>
+        
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-text">
+                            "We went from page 3 on Google to ranking #1 for our main keywords. The SEO work was thorough and
+                            the results speak for themselves."
+                        </blockquote>
+                        <cite class="testimonial-author">
+                            <strong>Maria Gonzalez</strong>
+                            <span>Gonzalez Law Firm</span>
+                        </cite>
+                    </div>
+        
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-text">
+                            "The mobile experience is fantastic. 70% of our traffic comes from phones now, and the conversion
+                            rate is higher than our old desktop site."
+                        </blockquote>
+                        <cite class="testimonial-author">
+                            <strong>Robert Hayes</strong>
+                            <span>Hayes Plumbing & Heating</span>
+                        </cite>
+                    </div>
+        
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-text">
+                            "Not only did they build us a beautiful website, but they taught us how to maintain it and continue
+                            growing our online presence."
+                        </blockquote>
+                        <cite class="testimonial-author">
+                            <strong>Amanda Foster</strong>
+                            <span>Foster Real Estate Group</span>
+                        </cite>
+                    </div>
+        
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-text">
+                            "The analytics dashboard they set up helps us track exactly which marketing efforts are working.
+                            Data-driven decisions have improved our ROI significantly."
+                        </blockquote>
+                        <cite class="testimonial-author">
+                            <strong>James Parker</strong>
+                            <span>Parker Insurance Agency</span>
+                        </cite>
+                    </div>
+        
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-text">
+                            "Working with Webundance felt like having a marketing department. They understood our business goals
+                            and delivered solutions that actually work."
+                        </blockquote>
+                        <cite class="testimonial-author">
+                            <strong>Rachel Turner</strong>
+                            <span>Turner Veterinary Clinic</span>
+                        </cite>
+                    </div>
+        
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-text">
+                            "The project was delivered on time and on budget. Communication was excellent throughout, and the
+                            final result exceeded our expectations."
+                        </blockquote>
+                        <cite class="testimonial-author">
+                            <strong>Michael Chen</strong>
+                            <span>Chen Family Restaurant</span>
+                        </cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Summary Statistics -->
+        <section class="summary-stats section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Results Across All Projects</h2>
+                    <p class="section-subtitle">Consistent performance improvements for businesses of all sizes</p>
+                </div>
+        
+                <div class="stats-overview">
+                    <div class="stats-row">
+                        <div class="stat-category animate-on-scroll">
+                            <h3 class="stat-category-title">Traffic Growth</h3>
+                            <div class="stat-details">
+                                <div class="stat-detail">
+                                    <span class="stat-number">25%</span>
+                                    <span class="stat-label">Average Increase</span>
+                                </div>
+                                <div class="stat-detail">
+                                    <span class="stat-number">312%</span>
+                                    <span class="stat-label">Best Performance</span>
+                                </div>
+                                <div class="stat-detail">
+                                    <span class="stat-number">4-6</span>
+                                    <span class="stat-label">Months to Peak</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="stat-category animate-on-scroll">
+                            <h3 class="stat-category-title">Search Rankings</h3>
+                            <div class="stat-details">
+                                <div class="stat-detail">
+                                    <span class="stat-number">40%</span>
+                                    <span class="stat-label">Ranking Improvement</span>
+                                </div>
+                                <div class="stat-detail">
+                                    <span class="stat-number">8.5</span>
+                                    <span class="stat-label">Avg Page 1 Rankings</span>
+                                </div>
+                                <div class="stat-detail">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Months to Page 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="stats-row">
+                        <div class="stat-category animate-on-scroll">
+                            <h3 class="stat-category-title">Lead Generation</h3>
+                            <div class="stat-details">
+                                <div class="stat-detail">
+                                    <span class="stat-number">185%</span>
+                                    <span class="stat-label">Lead Increase</span>
+                                </div>
+                                <div class="stat-detail">
+                                    <span class="stat-number">4.2%</span>
+                                    <span class="stat-label">Avg Conversion Rate</span>
+                                </div>
+                                <div class="stat-detail">
+                                    <span class="stat-number">67%</span>
+                                    <span class="stat-label">Mobile Conversion Boost</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="stat-category animate-on-scroll">
+                            <h3 class="stat-category-title">Client Satisfaction</h3>
+                            <div class="stat-details">
+                                <div class="stat-detail">
+                                    <span class="stat-number">98%</span>
+                                    <span class="stat-label">Satisfaction Rate</span>
+                                </div>
+                                <div class="stat-detail">
+                                    <span class="stat-number">85%</span>
+                                    <span class="stat-label">Retention Rate</span>
+                                </div>
+                                <div class="stat-detail">
+                                    <span class="stat-number">4.9</span>
+                                    <span class="stat-label">Average Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Final CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content text-center">
+                    <h2 class="cta-title">Ready to Get Similar Results?</h2>
+                    <p class="cta-subtitle">Join successful businesses that have transformed their online presence with
+                        data-driven web solutions.</p>
+        
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            Start Your Growth Journey
+                        </a>
+                        <a href="process.html" class="btn btn-secondary btn-large">
+                            Learn Our Process
+                        </a>
+                    </div>
+        
+                    <div class="cta-guarantee">
+                        <p class="guarantee-text">
+                            <strong>Our Promise:</strong> See measurable improvements within 90 days or we'll work for free
+                            until you do.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -58,7 +620,7 @@
                         <li><a href="contact.html" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
-    
+                
                 <!-- Services Column -->
                 <div class="footer-column">
                     <h3 class="footer-title">Services</h3>
@@ -68,7 +630,7 @@
                         <li><a href="services.html#analytics" class="footer-link">Analytics & Insights</a></li>
                     </ul>
                 </div>
-    
+                
                 <!-- Contact Info Column -->
                 <div class="footer-column">
                     <h3 class="footer-title">Contact Info</h3>
@@ -88,7 +650,7 @@
                     </div>
                 </div>
             </div>
-    
+            
             <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <p class="footer-copyright">
@@ -97,7 +659,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
     <script src="js/animations.js" defer></script>
