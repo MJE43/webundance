@@ -1,0 +1,299 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Webundance Project Standards for AI Agents
+
+## Project Overview
+
+**Purpose**: Lead generation website for Webundance - a web development consultancy serving small businesses
+**Tech Stack**: Vanilla HTML5, CSS3, JavaScript (NO frameworks/libraries except Google Fonts)
+**Business Goal**: Convert visitors to clients through proven results showcase (98% satisfaction, 25% traffic increase, 40% ranking boost, 85% retention)
+
+## File Architecture Rules
+
+### Mandatory File Structure
+- **HTML Pages**: `index.html`, `services.html`, `process.html`, `results.html`, `contact.html`
+- **CSS**: `css/main.css`, `css/components.css`, `css/utilities.css`
+- **JavaScript**: `js/main.js`, `js/animations.js`, `js/contact.js`, `js/services.js`
+- **Documentation**: `docs/documentation.md` (NEVER modify without user approval)
+
+### File Coordination Requirements
+- **When modifying CSS**: Always check impact across all 3 CSS files
+- **When adding components**: Add to `css/components.css`, register in `css/main.css` imports
+- **When adding animations**: Use `js/animations.js`, coordinate with CSS transitions
+- **When modifying contact forms**: Update both `contact.html` AND `js/contact.js`
+- **When adding services content**: Update `services.html` AND `js/services.js`
+
+### File Size Constraints
+- **CRITICAL**: `css/components.css` is already 114KB - DO NOT exceed 150KB
+- Individual CSS files: < 50KB (except components.css)
+- Individual JS files: < 30KB
+- **Total page weight**: < 1MB excluding images
+- **Hero images**: < 200KB (WebP format mandatory)
+- **Other images**: < 100KB
+
+## Design System Enforcement
+
+### CSS Custom Properties (MANDATORY)
+**NEVER hardcode colors, spacing, or typography**. Always use these variables:
+
+#### Colors
+```css
+/* Primary colors - USE THESE EXACTLY */
+--primary: #2563eb
+--primary-dark: #1e40af  
+--primary-light: #3b82f6
+--secondary: #10b981
+--accent: #8b5cf6
+
+/* Text colors */
+--text-dark: #1f2937
+--text-body: #4b5563
+--text-light: #6b7280
+
+/* Backgrounds */
+--bg-white: #ffffff
+--bg-light: #f9fafb
+--bg-gray: #f3f4f6
+```
+
+#### Spacing System (MANDATORY)
+```css
+/* Use ONLY these spacing values */
+--space-1: 0.25rem  /* 4px */
+--space-2: 0.5rem   /* 8px */
+--space-4: 1rem     /* 16px */
+--space-6: 1.5rem   /* 24px */
+--space-8: 2rem     /* 32px */
+--space-12: 3rem    /* 48px */
+--space-16: 4rem    /* 64px */
+--space-20: 5rem    /* 80px */
+--space-24: 6rem    /* 96px */
+```
+
+#### Typography (MANDATORY)
+```css
+/* Font family */
+--font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
+--font-display: 'Inter', sans-serif
+
+/* Font sizes */
+--text-sm: 0.875rem   /* 14px */
+--text-base: 1rem     /* 16px */
+--text-lg: 1.125rem   /* 18px */
+--text-xl: 1.25rem    /* 20px */
+--text-2xl: 1.5rem    /* 24px */
+--text-3xl: 2rem      /* 32px */
+--text-4xl: 2.5rem    /* 40px */
+--text-5xl: 3rem      /* 48px */
+```
+
+### Prohibited Design Practices
+- ❌ **NO** arbitrary values like `padding: 23px`
+- ❌ **NO** hardcoded colors like `color: #blue`
+- ❌ **NO** CSS frameworks (Bootstrap, Tailwind, etc.)
+- ❌ **NO** JavaScript frameworks (React, Vue, jQuery)
+- ❌ **NO** icon libraries (use SVG inline or from `/images/`)
+
+## Business Content Requirements
+
+### Mandatory Statistics (NEVER CHANGE)
+- **98%** client satisfaction rate
+- **25%** average traffic increase  
+- **40%** ranking boost average
+- **85%** client retention rate
+
+### Required Contact Information
+- **Email**: eisner.michaelj@gmail.com
+- **Phone**: 520-365-7151  
+- **Location**: Tucson, AZ
+- **Response Promise**: "We respond within 24 hours"
+
+### Brand Voice Rules
+- **Professional but approachable** tone
+- Use **"you"** (client-focused), minimize **"we"**  
+- Include **specific data/numbers** in claims
+- Focus on **benefits over features**
+- **Action-oriented CTAs** on every page
+
+## Performance Rules
+
+### Critical Performance Constraints
+- **Page load time**: < 3 seconds on 3G
+- **Total page weight**: < 1MB (excluding images)
+- **Mobile performance score**: > 90 (Google PageSpeed)
+
+### Image Optimization Requirements
+- **Format**: WebP with JPG fallback mandatory
+- **Responsive images**: Use `srcset` for all images > 400px width
+- **Lazy loading**: `loading="lazy"` for all images below fold
+- **Alt text**: Descriptive alt text for SEO (include keywords naturally)
+
+### Code Optimization Rules
+- **Critical CSS**: Inline critical CSS in `<head>`
+- **Defer non-critical**: Use `defer` for non-critical JavaScript
+- **Preload**: Key resources like fonts and main CSS
+- **Minify**: Production CSS/JS must be minified
+
+## Accessibility Requirements (WCAG 2.1 AA)
+
+### Mandatory Accessibility Rules
+- **Color contrast**: 4.5:1 for normal text, 3:1 for large text
+- **Keyboard navigation**: All interactive elements accessible via keyboard
+- **Focus indicators**: Visible focus states required
+- **Semantic HTML**: Use proper heading hierarchy (h1 → h2 → h3)
+- **Screen reader support**: ARIA labels where semantic HTML insufficient
+
+### Required ARIA Patterns
+```html
+<!-- Contact forms -->
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" required aria-describedby="email-error">
+<span id="email-error" class="error" role="alert"></span>
+
+<!-- Screen reader only text -->
+<span class="sr-only">Additional context for screen readers</span>
+```
+
+## JavaScript Constraints
+
+### Allowed JavaScript Patterns
+- **Vanilla ES6+**: Modern JavaScript only, no transpilation
+- **Event delegation**: For performance with dynamic content
+- **Intersection Observer**: For scroll animations and lazy loading
+- **Progressive enhancement**: All functionality must work without JS
+
+### Animation Requirements
+- **Performance**: Use `transform` and `opacity` only
+- **Duration**: 0.3s for hovers, 0.8s for entrances
+- **Respect user preferences**: Honor `prefers-reduced-motion`
+- **Intersection Observer**: For scroll-triggered animations
+
+### Prohibited JavaScript
+- ❌ **NO** jQuery or any external libraries
+- ❌ **NO** heavy frameworks  
+- ❌ **NO** polyfills for modern features
+- ❌ **NO** global variable pollution
+
+## Page-Specific Rules
+
+### Home Page (index.html)
+- **Hero CTA**: "Start Your Growth Journey" (primary), "View Our Results" (secondary)
+- **Stats section**: Must include all 4 business metrics with animation
+- **Service preview**: 3 cards linking to services page
+- **Final CTA**: Contact form or consultation scheduling
+
+### Services Page (services.html)
+- **3 service sections**: Web Development, SEO & Content, Analytics & Insights
+- **Service comparison table**: Starter, Growth, Premium tiers
+- **Pricing**: Include starting price ranges
+
+### Process Page (process.html)  
+- **4 process steps**: Discovery, Strategy, Design & Development, Launch & Optimization
+- **FAQ section**: Expandable accordion design
+- **Timeline information**: Clear project timelines
+
+### Results Page (results.html)
+- **Case studies**: 3-4 with before/after metrics
+- **Testimonials grid**: 6-8 client testimonials
+- **Industry variety**: Show diverse client types
+
+### Contact Page (contact.html)
+- **Contact form**: Name, Email, Phone (optional), Business Name, Project Type, Budget Range, Message
+- **Honey pot**: Spam prevention field (hidden)
+- **Consultation scheduler**: Calendar integration
+- **Response time promise**: Display clearly
+
+## SEO Requirements
+
+### Meta Tags (Page-Specific)
+- **Title tags**: 50-60 characters, include target keywords
+- **Meta descriptions**: 150-160 characters, compelling call-to-action
+- **H1 tags**: One per page, includes primary keyword
+- **Internal linking**: 2-3 relevant internal links per page
+
+### Structured Data Requirements
+- **Organization schema**: Company information
+- **Local business schema**: For Tucson, AZ location
+- **Service schema**: For web development services
+
+## AI Decision-Making Standards
+
+### Priority Order for Conflicts
+1. **Performance constraints** (file size, load time)
+2. **Accessibility requirements** (WCAG 2.1 AA)
+3. **Business requirements** (stats, contact info, messaging)
+4. **Design system consistency** (colors, spacing, typography)
+5. **SEO optimization**
+
+### When to Seek User Input
+- **Content changes**: Altering business statistics or contact information
+- **Architecture changes**: Major structural modifications
+- **New page creation**: Adding pages beyond the 5 specified
+- **External dependencies**: Adding any libraries or frameworks
+
+### Error Handling Priorities
+1. **Fix accessibility violations** immediately
+2. **Address performance issues** that affect load time
+3. **Resolve mobile responsiveness** problems
+4. **Correct SEO issues** (missing alt text, broken links)
+
+## Testing Requirements
+
+### Pre-Deployment Checklist
+- [ ] **Cross-browser testing**: Chrome, Firefox, Safari, Edge
+- [ ] **Mobile responsiveness**: Test on actual devices
+- [ ] **Performance audit**: Google PageSpeed Insights > 90
+- [ ] **Accessibility scan**: WAVE tool, no violations
+- [ ] **Form testing**: All contact forms submit correctly
+- [ ] **Link validation**: No broken internal/external links
+
+### Analytics Requirements
+- **Google Analytics**: Implement tracking for all pages
+- **Conversion tracking**: Contact form submissions, consultation bookings
+- **Performance monitoring**: Core Web Vitals tracking
+
+## Prohibited Actions
+
+### Absolutely Forbidden
+- ❌ Modifying business statistics without explicit user approval
+- ❌ Changing contact information (email, phone, location)
+- ❌ Adding external JavaScript libraries or frameworks
+- ❌ Using CSS frameworks or pre-built component libraries
+- ❌ Hardcoding any design values (colors, spacing, fonts)
+- ❌ Creating pages beyond the specified 5-page structure
+- ❌ Removing accessibility features to improve aesthetics
+- ❌ Exceeding performance budgets for file sizes
+- ❌ Modifying the core brand messaging or value propositions
+
+### Code Quality Violations
+- ❌ Inline styles in HTML (use CSS classes)
+- ❌ Non-semantic HTML structure
+- ❌ Missing alt text on images
+- ❌ Inaccessible form controls
+- ❌ Non-responsive design patterns
+- ❌ Blocking JavaScript on page load
+- ❌ Unused CSS or JavaScript code
+
+## Emergency Procedures
+
+### Performance Budget Exceeded
+1. **Analyze file sizes**: Identify largest contributors
+2. **Optimize images**: Compress and convert to WebP
+3. **Remove unused code**: Audit CSS/JS for unused selectors/functions
+4. **Split large files**: Consider code splitting for JS > 30KB
+
+### Accessibility Violation Detected
+1. **Immediate fix**: Address WCAG violations before any other changes
+2. **Test with screen reader**: Verify fix works with assistive technology
+3. **Document fix**: Update code comments explaining accessibility considerations
+
+### Mobile Performance Issues
+1. **Test on real devices**: Not just browser dev tools
+2. **Optimize critical path**: Inline critical CSS, defer non-critical resources
+3. **Reduce image sizes**: Implement responsive images with srcset
+4. **Minimize JavaScript**: Remove non-essential interactive features on mobile
+
+This document serves as the complete operational guide for AI agents working on the Webundance project. Follow these rules strictly to maintain project integrity and business objectives. 
